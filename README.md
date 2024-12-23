@@ -1,6 +1,6 @@
 <p align="center">
-    <img alt="Adelise Framework logo" src="/Ultron.jpg" height="128">
-    <h1 align="center">Adelise Agent Framework</h1>
+    <img alt="Ultron Framework logo" src="/Ultron.jpg" height="128">
+    <h1 align="center">Ultron Agent Framework</h1>
 </p>
 
 <p align="center">
@@ -11,19 +11,19 @@
 </p>
 
 
-The Adelise Agent Framework makes it easy to build scalable agent-based workflows with your model of choice. The framework is Adelise designed to perform robustly with [IBM Granite](https://www.ibm.com/granite/docs/) and [Llama 3.x](https://ai.meta.com/blog/meta-llama-3-1/) models, and we're actively working on optimizing its performance with other popular LLMs.<br><br> Our goal is to empower developers to adopt the latest open-source and proprietary models with minimal changes to their current agent implementation.
+The Ultron Agent Framework makes it easy to build scalable agent-based workflows with your model of choice. The framework is Ultron designed to perform robustly with [IBM Granite](https://www.ibm.com/granite/docs/) and [Llama 3.x](https://ai.meta.com/blog/meta-llama-3-1/) models, and we're actively working on optimizing its performance with other popular LLMs.<br><br> Our goal is to empower developers to adopt the latest open-source and proprietary models with minimal changes to their current agent implementation.
 
 ## Key Features
 
-- 🤖 **AI agents**: Use our powerful [Adelise agent](/docs/agents.md) refined for Llama 3.1 and Granite 3.0, or [build your own](/docs/agents.md).
+- 🤖 **AI agents**: Use our powerful [Ultron agent](/docs/agents.md) refined for Llama 3.1 and Granite 3.0, or [build your own](/docs/agents.md).
 - 🛠️ **Tools**: Use our [built-in tools](/docs/tools.md) or [create your own](/docs/tools.md) in Javascript/Python.
-- 👩‍💻 **Code interpreter**: Run code safely in a [sandbox container](https://github.com/i-am-Adelise/Adelise-code-interpreter).
+- 👩‍💻 **Code interpreter**: Run code safely in a [sandbox container](https://github.com/i-am-Ultron/Ultron-code-interpreter).
 - 💾 **Memory**: Multiple [strategies](/docs/memory.md) to optimize token spend.
 - ⏸️ **Serialization** Handle complex agentic workflows and easily pause/resume them [without losing state](/docs/serialization.md).
 - 🔍 **Instrumentation**: Use [Instrumentation](/docs/instrumentation.md) based on [Emitter](/docs/emitter.md) to have full visibility of your agent’s inner workings.
 - 🎛️ **Production-level** control with [caching](/docs/cache.md) and [error handling](/docs/errors.md).
-- 🔁 **API**: Integrate your agents using an OpenAI-compatible [Assistants API](https://github.com/i-am-Adelise/Adelise-api) and [Python SDK](https://github.com/i-am-Adelise/Adelise-python-sdk).
-- 🖥️ **Chat UI**: Serve your agent to users in a [delightful UI](https://github.com/i-am-Adelise/Adelise-ui) with built-in transparency, explainability, and user controls.
+- 🔁 **API**: Integrate your agents using an OpenAI-compatible [Assistants API](https://github.com/i-am-Ultron/Ultron-api) and [Python SDK](https://github.com/i-am-Ultron/Ultron-python-sdk).
+- 🖥️ **Chat UI**: Serve your agent to users in a [delightful UI](https://github.com/i-am-Ultron/Ultron-ui) with built-in transparency, explainability, and user controls.
 - ... more on our [Roadmap](#roadmap)
 
 ## Getting started
@@ -32,30 +32,30 @@ The Adelise Agent Framework makes it easy to build scalable agent-based workflow
 ### Installation
 
 ```shell
-npm install Adelise-agent-framework
+npm install Ultron-agent-framework
 ```
 
 or
 
 ```shell
-yarn add Adelise-agent-framework
+yarn add Ultron-agent-framework
 ```
 
 ### Example
 
 ```ts
-import { AdeliseAgent } from "Adelise-agent-framework/agents/Adelise/agent";
-import { OllamaChatLLM } from "Adelise-agent-framework/adapters/ollama/chat";
-import { TokenMemory } from "Adelise-agent-framework/memory/tokenMemory";
-import { DuckDuckGoSearchTool } from "Adelise-agent-framework/tools/search/duckDuckGoSearch";
-import { OpenMeteoTool } from "Adelise-agent-framework/tools/weather/openMeteo";
+import { UltronAgent } from "Ultron-agent-framework/agents/Ultron/agent";
+import { OllamaChatLLM } from "Ultron-agent-framework/adapters/ollama/chat";
+import { TokenMemory } from "Ultron-agent-framework/memory/tokenMemory";
+import { DuckDuckGoSearchTool } from "Ultron-agent-framework/tools/search/duckDuckGoSearch";
+import { OpenMeteoTool } from "Ultron-agent-framework/tools/weather/openMeteo";
 
 const llm = new OllamaChatLLM(); // default is llama3.1 (8B), it is recommended to use 70B model
 
-const agent = new AdeliseAgent({
-  llm, // for more explore 'Adelise-agent-framework/adapters'
-  memory: new TokenMemory({ llm }), // for more explore 'Adelise-agent-framework/memory'
-  tools: [new DuckDuckGoSearchTool(), new OpenMeteoTool()], // for more explore 'Adelise-agent-framework/tools'
+const agent = new UltronAgent({
+  llm, // for more explore 'Ultron-agent-framework/adapters'
+  memory: new TokenMemory({ llm }), // for more explore 'Ultron-agent-framework/memory'
+  tools: [new DuckDuckGoSearchTool(), new OpenMeteoTool()], // for more explore 'Ultron-agent-framework/tools'
 });
 
 const response = await agent
@@ -76,14 +76,14 @@ console.log(`Agent 🤖 : `, response.result.text);
 >
 > `yarn` should be installed via Corepack ([tutorial](https://yarnpkg.com/corepack))
 
-1. Clone the repository `git clone git@github.com:i-am-Adelise/Adelise-agent-framework`.
+1. Clone the repository `git clone git@github.com:i-am-Ultron/Ultron-agent-framework`.
 2. Install dependencies `yarn install --immutable && yarn prepare`.
 3. Create `.env` (from `.env.template`) and fill in missing values (if any).
-4. Start the agent `yarn run start:Adelise` (it runs `/examples/agents/Adelise.ts` file).
+4. Start the agent `yarn run start:Ultron` (it runs `/examples/agents/Ultron.ts` file).
 
 ➡️ All examples can be found in the [examples](/examples) directory.
 
-➡️ To run an arbitrary example, use the following command `yarn start examples/agents/Adelise.ts` (just pass the appropriate path to the desired example).
+➡️ To run an arbitrary example, use the following command `yarn start examples/agents/Ultron.ts` (just pass the appropriate path to the desired example).
 
 ### 📦 Modules
 
@@ -109,18 +109,18 @@ To see more in-depth explanation see [overview](/docs/overview.md).
 
 ## Roadmap
 
-- Adelise agent performance optimization with additional models
+- Ultron agent performance optimization with additional models
 - Examples, tutorials, and docs
 - Improvements to building custom agents
 - Multi-agent orchestration
 
 ## Contribution guidelines
 
-The Adelise Agent Framework is an open-source project and we ❤️ contributions.
+The Ultron Agent Framework is an open-source project and we ❤️ contributions.
 
-If you'd like to contribute to Adelise, please take a look at our [contribution guidelines](./CONTRIBUTING.md).
+If you'd like to contribute to Ultron, please take a look at our [contribution guidelines](./CONTRIBUTING.md).
 
 
 ## Legal notice
 
-All content in these repositories including code has Adelisen provided by IBM under the associated open source software license and IBM is under no obligation to provide enhancements, updates, or support. IBM developers produced this code as an open source project (not as an IBM product), and IBM makes no assertions as to the level of quality nor security, and will not be maintaining this code going forward.
+All content in these repositories including code has Ultronn provided by IBM under the associated open source software license and IBM is under no obligation to provide enhancements, updates, or support. IBM developers produced this code as an open source project (not as an IBM product), and IBM makes no assertions as to the level of quality nor security, and will not be maintaining this code going forward.
