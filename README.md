@@ -1,12 +1,12 @@
 <p align="center">
-    <img alt="Adelise Framework logo" src="/docs/assets/adelisepng.jpg" height="128">
+    <img alt="Adelise Framework logo" src="/Ultron.jpg" height="128">
     <h1 align="center">Adelise Agent Framework</h1>
 </p>
 
 <p align="center">
   <!-- Twitter Badge -->
-  <a href="https://twitter.com/Adelise_Agent">
-    <img src="https://img.shields.io/twitter/follow/Adelise_Agent?style=social" alt="Twitter Follow"/>
+  <a href="https://twitter.com/Ultronagent">
+    <img src="https://img.shields.io/twitter/follow/Ultronagent?style=social" alt="Twitter Follow"/>
   </a>
 </p>
 
