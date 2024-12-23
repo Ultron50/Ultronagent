@@ -1,6 +1,6 @@
 <p align="center">
     <img alt="Ultron Framework logo" src="/Ultron.jpg" height="128">
-    <h1 align="center">Ultron Agent Framework</h1>
+    <h1 align="center">Ultron Agent </h1>
 </p>
 
 <p align="center">
